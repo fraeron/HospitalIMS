@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|c:\\users\\omega\\source\\repos\\hospitalims\\hospitalimsui\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|solutionrelative:hospitalimsui\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|c:\\users\\omega\\source\\repos\\hospitalims\\hospitalimsui\\apps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|solutionrelative:hospitalimsui\\apps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|c:\\users\\omega\\source\\repos\\hospitalims\\hospitalimsui\\hospitalimsui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|solutionrelative:hospitalimsui\\hospitalimsui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|c:\\users\\omega\\source\\repos\\hospitalims\\hospitalimsui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D90DFC21-4AC6-481C-888B-2916CC2C58BF}|HospitalIMSUI\\HospitalIMSUI.csproj|solutionrelative:hospitalimsui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSUI\\Utils.cs",
+              "RelativeDocumentMoniker": "HospitalIMSUI\\Utils.cs",
+              "ToolTip": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSUI\\Utils.cs",
+              "RelativeToolTip": "HospitalIMSUI\\Utils.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAowGEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T04:07:20.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Apps.cs",
+              "DocumentMoniker": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSUI\\Apps.cs",
+              "RelativeDocumentMoniker": "HospitalIMSUI\\Apps.cs",
+              "ToolTip": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSUI\\Apps.cs",
+              "RelativeToolTip": "HospitalIMSUI\\Apps.cs",
+              "ViewState": "AQIAAKMAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T04:06:14.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSUI\\Program.cs",
+              "RelativeDocumentMoniker": "HospitalIMSUI\\Program.cs",
+              "ToolTip": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSUI\\Program.cs",
+              "RelativeToolTip": "HospitalIMSUI\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwDAAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T04:05:20.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HospitalIMSUI",
+              "DocumentMoniker": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
+              "RelativeDocumentMoniker": "HospitalIMSUI\\HospitalIMSUI.csproj",
+              "ToolTip": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
+              "RelativeToolTip": "HospitalIMSUI\\HospitalIMSUI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-13T04:05:17.659Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

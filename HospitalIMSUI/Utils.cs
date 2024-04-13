@@ -5,13 +5,6 @@ namespace HospitalIMSUI
 {
     public class Utils
     {
-        public static string GetPrescriptionCard()
-        {
-            string card = ("""
-                
-                """);
-            return card;
-        }
 
         public static void ShowTitleCard()
         {
@@ -95,7 +88,7 @@ namespace HospitalIMSUI
                 }
                 else
                 {
-                    Console.WriteLine(option);
+                    Console.WriteLine("* " + option);
                 }
             }
             Console.WriteLine();

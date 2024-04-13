@@ -1,0 +1,12 @@
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\bin\Debug\net8.0\HospitalIMSModels.deps.json
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\bin\Debug\net8.0\HospitalIMSModels.dll
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\bin\Debug\net8.0\HospitalIMSModels.pdb
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.AssemblyInfoInputs.cache
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.AssemblyInfo.cs
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.csproj.CoreCompileInputs.cache
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.sourcelink.json
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.dll
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\refint\HospitalIMSModels.dll
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.pdb
+C:\Users\Omega\Source\Repos\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\ref\HospitalIMSModels.dll

@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HospitalIMSUI/1.0.0": {
+        "dependencies": {
+          "HospitalIMSBL": "1.0.0"
+        },
+        "runtime": {
+          "HospitalIMSUI.dll": {}
+        }
+      },
+      "HospitalIMSBL/1.0.0": {
+        "dependencies": {
+          "HospitalIMSDL": "1.0.0"
+        },
+        "runtime": {
+          "HospitalIMSBL.dll": {}
+        }
+      },
+      "HospitalIMSDL/1.0.0": {
+        "dependencies": {
+          "HospitalIMSModels": "1.0.0"
+        },
+        "runtime": {
+          "HospitalIMSDL.dll": {}
+        }
+      },
+      "HospitalIMSModels/1.0.0": {
+        "runtime": {
+          "HospitalIMSModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HospitalIMSUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HospitalIMSBL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HospitalIMSDL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HospitalIMSModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

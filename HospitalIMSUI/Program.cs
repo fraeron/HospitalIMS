@@ -46,7 +46,7 @@ namespace HostpitalIMSUI
 
         private static void ShowNextUpdate()
         {
-            Console.WriteLine("\nTo be added in the next update:");
+            Console.WriteLine("\n[ANNOUNCEMENT] To be added in the next update:");
             Utils.CreateMenu(new List<String> {
                 "Add a Prescription",
                 "Remove a Prescription",
