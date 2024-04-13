@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {}
+    "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
+    "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
         "projectName": "HospitalIMSModels",
-        "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+        "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
         "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\obj\\",
         "projectStyle": "PackageReference",

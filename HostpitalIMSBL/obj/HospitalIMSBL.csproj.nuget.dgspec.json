@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj": {}
+    "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj": {
+    "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj",
         "projectName": "HospitalIMSDL",
-        "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj",
+        "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj",
         "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\obj\\",
         "projectStyle": "PackageReference",
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
-                "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj"
+              "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
+                "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj"
               }
             }
           }
@@ -73,12 +73,12 @@
         }
       }
     },
-    "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
+    "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
         "projectName": "HospitalIMSModels",
-        "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+        "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
         "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\obj\\",
         "projectStyle": "PackageReference",
@@ -138,12 +138,12 @@
         }
       }
     },
-    "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj": {
+    "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
         "projectName": "HospitalIMSBL",
-        "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
+        "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
         "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\obj\\",
         "projectStyle": "PackageReference",
@@ -167,8 +167,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj": {
-                "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj"
+              "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj": {
+                "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj"
               }
             }
           }

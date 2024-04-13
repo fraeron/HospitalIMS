@@ -8,6 +8,7 @@ namespace HospitalIMSUI
     public class Apps
     {
         public static Services services = new Services();
+        public static Utils utils = new Utils();
 
         public string GetName()
         {
@@ -22,7 +23,7 @@ namespace HospitalIMSUI
         public void AddNewPatient()
         {
             Console.Clear();
-            Utils.CreateBanner("ADD A NEW PATIENT");
+            utils.CreateBanner("ADD A NEW PATIENT");
             Console.WriteLine("[ADDPATIENT] WARNING. This will require the user to input multiple answers.");
             Console.WriteLine("[ADDPATIENT] Proceed? Type 'y' to continue.");
             string userProceed = Console.ReadLine() ?? "";
@@ -64,7 +65,7 @@ namespace HospitalIMSUI
                 {
                     Console.WriteLine("[ADDPATIENT] Failed to add new patient. Please try again.");
                 }
-                Utils.PressToConfirm();
+                utils.PressToConfirm();
             }
 
         }
@@ -72,7 +73,7 @@ namespace HospitalIMSUI
         public void SearchForPatient()
         {
             Console.Clear();
-            Utils.CreateBanner("SEARCH FOR A PATIENT");
+            utils.CreateBanner("SEARCH FOR A PATIENT");
             Console.Write("[PATIENTSEARCH] Please enter Patient ID: ");
             string id = Console.ReadLine() ?? "";
             Patient? patient = services.SearchPatient(id);
@@ -95,13 +96,13 @@ namespace HospitalIMSUI
                     """
                     );
             }
-            Utils.PressToConfirm();
+            utils.PressToConfirm();
         }
 
         public void AddMedication()
         {
             Console.Clear();
-            Utils.CreateBanner("ADD A NEW MEDICATION DATA");
+            utils.CreateBanner("ADD A NEW MEDICATION DATA");
             Console.WriteLine("[ADDMEDICINE] WARNING. This will require the user to input multiple answers.");
             Console.WriteLine("[ADDMEDICINE] Proceed? Type 'y' to continue.");
             string userProceed = Console.ReadLine() ?? "";
@@ -137,14 +138,14 @@ namespace HospitalIMSUI
                 {
                     Console.WriteLine("[ADDMEDICINE] Failed to add new medication data. Please try again.");
                 }
-                Utils.PressToConfirm();
+                utils.PressToConfirm();
             }
         }
 
         public void DeleteMedication()
         {
             Console.Clear();
-            Utils.CreateBanner("DELETE A MEDICATION DATA");
+            utils.CreateBanner("DELETE A MEDICATION DATA");
             Console.Write("[DELETEMEDICATION] Please enter Medication Data ID: ");
             string id = Console.ReadLine() ?? "";
             if (services.RemoveMedication(id))
@@ -155,13 +156,13 @@ namespace HospitalIMSUI
             {
                 Console.WriteLine("[DELETEMEDICATION] Sorry. This medication data does not exist.");
             }
-            Utils.PressToConfirm();
+            utils.PressToConfirm();
         }
 
         public void DeleteOldPatient()
         {
             Console.Clear();
-            Utils.CreateBanner("DELETE A PATIENT");
+            utils.CreateBanner("DELETE A PATIENT");
             Console.Write("[DELETEPATIENT] Please enter Patient ID: ");
             string id = Console.ReadLine() ?? "";
             if (services.RemovePatient(id))
@@ -172,13 +173,13 @@ namespace HospitalIMSUI
             {
                 Console.WriteLine("[DELETEPATIENT] Sorry. This patient does not exist.");
             }
-            Utils.PressToConfirm();
+            utils.PressToConfirm();
         }
 
         public void ViewPersonalInformation()
         {
             Console.Clear();
-            Utils.CreateBanner("YOUR PERSONAL INFORMATION");
+            utils.CreateBanner("YOUR PERSONAL INFORMATION");
             Doctor? doctor = null;
             Nurse? nurse = null;
             switch (services.CurrentUserType())
@@ -217,13 +218,13 @@ namespace HospitalIMSUI
                 Console.WriteLine("[VIEWINFO] Your 2nd phone number: " + nurse.phoneNumber2);
                 Console.WriteLine("[VIEWINFO] Your type: " + nurse.type);
             }
-            Utils.PressToConfirm();
+            utils.PressToConfirm();
         }
 
         public void ViewPrescript(Prescription target)
         {
             Console.Clear();
-            Utils.CreateBanner("PRESCRIPTION HISTORY");
+            utils.CreateBanner("PRESCRIPTION HISTORY");
             string inscriptionListString = "";
             foreach (Medication part in target.inscription)
             {
@@ -269,13 +270,13 @@ namespace HospitalIMSUI
                 [[==================================================================================================================]]
                 
                 """);
-            Utils.PressToConfirm();
+            utils.PressToConfirm();
         }
 
         public void ViewPrescriptHistory()
         {
             Console.Clear();
-            Utils.CreateBanner("YOUR PRESCRIPTION HISTORY");
+            utils.CreateBanner("YOUR PRESCRIPTION HISTORY");
             List<Prescription> prescriptions = services.GetPrescriptions();
             if (prescriptions.Count != 0)
             {
@@ -291,8 +292,8 @@ namespace HospitalIMSUI
                 while (intChoice != exitChoice)
                 {
                     Console.Clear();
-                    Utils.CreateBanner("YOUR PRESCRIPTION HISTORY");
-                    Utils.CreateMenu(history);
+                    utils.CreateBanner("YOUR PRESCRIPTION HISTORY");
+                    utils.CreateMenu(history);
                     Console.Write("[PRESCRIPTHISTORY] Please type a prescription to view: ");
                     userInput = Console.ReadLine() ?? "";
                     int.TryParse(userInput, out intChoice);
@@ -309,22 +310,22 @@ namespace HospitalIMSUI
             else
             {
                 Console.WriteLine("[PRESCRIPTHISTORY] Sorry! You do not have any history of prescriptions given.");
-                Utils.PressToConfirm();
+                utils.PressToConfirm();
             }
         }
 
         public void ViewMedicineList()
         {
             Console.Clear();
-            Utils.CreateBanner("MEDICINE DATABASE");
+            utils.CreateBanner("MEDICINE DATABASE");
             List<Medication> medications = services.GetMedications();
             List<String> history = new List<String>();
             foreach (Medication m in medications)
             {
                 history.Add(m.genericName);
             }
-            Utils.CreateMenu(history);
-            Utils.PressToConfirm();
+            utils.CreateMenu(history);
+            utils.PressToConfirm();
         }
 
     }

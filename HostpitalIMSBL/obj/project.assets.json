@@ -51,9 +51,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
+      "projectUniqueName": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
       "projectName": "HospitalIMSBL",
-      "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
+      "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
       "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HostpitalIMSBL\\obj\\",
       "projectStyle": "PackageReference",
@@ -77,8 +77,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj": {
-              "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj"
+            "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj": {
+              "projectPath": "C:\\Users\\Omega\\source\\repos\\HospitalIMS\\HospitalIMSDL\\HospitalIMSDL.csproj"
             }
           }
         }
