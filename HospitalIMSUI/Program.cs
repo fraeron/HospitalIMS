@@ -9,6 +9,7 @@ namespace HostpitalIMSUI
         private static bool isActive = true;
         private static bool isLogin = false;
         private static Apps apps = new Apps();
+        private static Utils utils = new Utils();
 
         private static void ShowMainMenu()
         {
@@ -32,7 +33,7 @@ namespace HostpitalIMSUI
 
         private static void ShowDoctorMenuOptions()
         {
-            Utils.CreateMenu(new List<String> {
+            utils.CreateMenu(new List<String> {
                 "Search for a Patient's Record",
                 "Add a New Patient Record",
                 "Delete an Old Patient Record",
@@ -47,7 +48,7 @@ namespace HostpitalIMSUI
         private static void ShowNextUpdate()
         {
             Console.WriteLine("\n[ANNOUNCEMENT] To be added in the next update:");
-            Utils.CreateMenu(new List<String> {
+            utils.CreateMenu(new List<String> {
                 "Add a Prescription",
                 "Remove a Prescription",
                 "View Medication"
@@ -56,7 +57,7 @@ namespace HostpitalIMSUI
 
         private static void ShowNurseMenuOptions()
         {
-            Utils.CreateMenu(new List<String> {
+            utils.CreateMenu(new List<String> {
                 "Search for a Patient's Record",
                 "Add a New Patient Record",
                 "Delete an Old Patient Record",
@@ -72,8 +73,8 @@ namespace HostpitalIMSUI
             while (isLogin)
             {
                 Console.Clear();
-                Utils.ShowDoctorCard();
-                Utils.CreateBanner(
+                utils.ShowDoctorCard();
+                utils.CreateBanner(
                     $"WELCOME, DOCTOR {apps.GetName()}!",
                     "What can we do for you today?");
                 ShowDoctorMenuOptions();
@@ -115,8 +116,8 @@ namespace HostpitalIMSUI
             while (isLogin)
             {
                 Console.Clear();
-                Utils.ShowNurseCard();
-                Utils.CreateBanner(
+                utils.ShowNurseCard();
+                utils.CreateBanner(
                     $"WELCOME, NURSE {apps.GetName()}!",
                     "What can we do for you today?");
                 ShowNurseMenuOptions();
@@ -177,11 +178,11 @@ namespace HostpitalIMSUI
         private static void ShowMainMenuOptions()
         {
             Console.Clear();
-            Utils.ShowTitleCard();
-            Utils.CreateBanner(
+            utils.ShowTitleCard();
+            utils.CreateBanner(
                 "Welcome! Please login your credentials to continue."
                 );
-            Utils.CreateMenu(new List<String> {
+            utils.CreateMenu(new List<String> {
                 "Login",
                 "Exit"
             });

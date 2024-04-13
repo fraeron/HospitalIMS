@@ -5,8 +5,7 @@ namespace HospitalIMSUI
 {
     public class Utils
     {
-
-        public static void ShowTitleCard()
+        public void ShowTitleCard()
         {
             string title = """
 
@@ -29,7 +28,7 @@ namespace HospitalIMSUI
             Console.WriteLine(title);
         }
 
-        public static void ShowDoctorCard()
+        public void ShowDoctorCard()
         {
             string title = $"""
 
@@ -46,7 +45,7 @@ namespace HospitalIMSUI
             Console.WriteLine(title);
         }
 
-        public static void ShowNurseCard()
+        public void ShowNurseCard()
         {
             string title = """
 
@@ -63,7 +62,7 @@ namespace HospitalIMSUI
             Console.WriteLine(title);
         }
 
-        public static void CreateBanner(string title, string description="")
+        public void CreateBanner(string title, string description="")
         {
             string banner = "";
             string border = "";
@@ -76,7 +75,7 @@ namespace HospitalIMSUI
             Console.WriteLine(banner);
         }
 
-        public static void CreateMenu(List<string> options, bool doIndex=true)
+        public void CreateMenu(List<string> options, bool doIndex=true)
         {
             int index = 0;
             foreach (string option in options)
@@ -94,7 +93,7 @@ namespace HospitalIMSUI
             Console.WriteLine();
         }
 
-        public static void PressToConfirm()
+        public void PressToConfirm()
         {
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadLine();
