@@ -14,7 +14,14 @@ namespace HospitalIMSBL
         static Nurse? currentNurse = null;
         static bool isLogin = false;
 
-        public byte VerifyUser(string username, string password)
+        public enum UserType
+        {
+            Doctor,
+            Nurse,
+            Invalid
+        }
+
+        public UserType VerifyUser(string username, string password)
         {
             Doctor? doctor = dataServices.GetDoctor(username, password);
             Nurse? nurse = dataServices.GetNurse(username, password);
@@ -23,17 +30,17 @@ namespace HospitalIMSBL
             {
                 currentDoctor = doctor;
                 isLogin = true;
-                return 0;
+                return UserType.Doctor;
             } 
             else if (nurse != null)
             {
                 currentNurse = nurse;
                 isLogin = true;
-                return 1;
+                return UserType.Nurse;
             }
             {
                 isLogin = false;
-                return 2; // Default.
+                return UserType.Invalid;
             }
         }
 

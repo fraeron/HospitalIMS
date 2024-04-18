@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Omega\\.nuget\\packages\\": {},
+    "C:\\Users\\Glass\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+      "projectUniqueName": "C:\\Users\\Glass\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
       "projectName": "HospitalIMSModels",
-      "projectPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
-      "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Omega\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\obj\\",
+      "projectPath": "C:\\Users\\Glass\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+      "packagesPath": "C:\\Users\\Glass\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Glass\\Source\\Repos\\HospitalIMS\\HospitalIMSModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Glass\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

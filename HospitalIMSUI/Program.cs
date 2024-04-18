@@ -1,6 +1,7 @@
 ﻿using HospitalIMSUI;
 using System.Collections.Generic;
 using System;
+using HospitalIMSBL;
 
 namespace HostpitalIMSUI
 {
@@ -157,14 +158,14 @@ namespace HostpitalIMSUI
             string username = Console.ReadLine() ?? "";
             Console.Write("[LOGIN] Please enter your password: ");
             string password = Console.ReadLine() ?? "";
-            byte userType = apps.VerifyUser(username, password);
+            Services.UserType userType = apps.VerifyUser(username, password);
             switch (userType)
             {
-                case 0:
+                case Services.UserType.Doctor:
                     isLogin = true;
                     ShowDoctorMenu();
                     break;
-                case 1:
+                case Services.UserType.Nurse:
                     isLogin = true;
                     ShowNurseMenu();
                     break;

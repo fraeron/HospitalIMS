@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HospitalIMSDL
-build_property.ProjectDir = C:\Users\Omega\source\repos\HospitalIMS\HospitalIMSDL\
+build_property.ProjectDir = C:\Users\Glass\Source\Repos\HospitalIMS\HospitalIMSDL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

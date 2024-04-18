@@ -15,7 +15,7 @@ namespace HospitalIMSUI
             return services.GetName();
         }
 
-        public byte VerifyUser(string username, string password)
+        public Services.UserType VerifyUser(string username, string password)
         {
             return services.VerifyUser(username, password);
         }
