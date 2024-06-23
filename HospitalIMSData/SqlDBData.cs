@@ -252,12 +252,31 @@ namespace HospitalIMSData
             return success;
         }
 
-        public int AddMedication(string tradeName)
+        public int AddMedication(Medication medication)
         {
             int success;
-            string insertStatement = "INSERT INTO medications VALUES @tradeName";
+            string insertStatement = """
+                INSERT INTO medications 
+                VALUES (
+                    @id,
+                    @tradeName,
+                    @genericName,
+                    @manufacturer,
+                    @dosageStrength,
+                    @quantity,
+                    @startTimeDrugTaken,
+                    @endTimeDrugTaken
+                )
+                """;
             SqlCommand insertCommand = new SqlCommand(insertStatement, sqlConnection);
-            insertCommand.Parameters.AddWithValue("@tradeName", tradeName);
+            insertCommand.Parameters.AddWithValue("@id", medication.id);
+            insertCommand.Parameters.AddWithValue("@tradeName", medication.tradeName);
+            insertCommand.Parameters.AddWithValue("@genericName", medication.genericName);
+            insertCommand.Parameters.AddWithValue("@manufacturer", medication.manufacturer);
+            insertCommand.Parameters.AddWithValue("@dosageStrength", medication.dosageStrength);
+            insertCommand.Parameters.AddWithValue("@quantity", medication.quantity);
+            insertCommand.Parameters.AddWithValue("@startTimeDrugTaken", medication.startTimeDrugTaken);
+            insertCommand.Parameters.AddWithValue("@endTimeDrugTaken", medication.endTimeDrugTaken);
             sqlConnection.Open();
             success = insertCommand.ExecuteNonQuery();
             sqlConnection.Close();
