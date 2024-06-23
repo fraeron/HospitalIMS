@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSUI", "HospitalIM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSModels", "HospitalIMSModels\HospitalIMSModels.csproj", "{727831FD-17F4-4492-8200-AE0C3925BABB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSBL", "HospitalIMSServices\HospitalIMSBL.csproj", "{18FCC01B-5C97-46A3-B5DD-7BEDBA207C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSServices", "HospitalIMSServices\HospitalIMSServices.csproj", "{18FCC01B-5C97-46A3-B5DD-7BEDBA207C6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSDL", "HospitalIMSData\HospitalIMSDL.csproj", "{6B6A14DB-3618-4204-A33E-FF6E7FF01BE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSData", "HospitalIMSData\HospitalIMSData.csproj", "{6B6A14DB-3618-4204-A33E-FF6E7FF01BE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

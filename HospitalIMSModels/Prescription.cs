@@ -10,7 +10,7 @@ namespace HospitalIMSModels
         public required Doctor doctor;
         public required DateTime date;
         public required string superscription;
-        public required List<Medication> inscription;
+        public required string inscription;
         public string? specialInstructions;
     }
 }

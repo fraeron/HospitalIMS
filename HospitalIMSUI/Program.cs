@@ -1,7 +1,7 @@
 ﻿using HospitalIMSUI;
 using System.Collections.Generic;
 using System;
-using HospitalIMSBL;
+using HospitalIMSServices;
 
 namespace HostpitalIMSUI
 {

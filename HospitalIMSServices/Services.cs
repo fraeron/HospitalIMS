@@ -1,11 +1,11 @@
 ﻿// Hospital Information Management System Business Layer
 
-using HospitalIMSDL;
+using HospitalIMSData;
 using HospitalIMSModels;
 using System;
 using System.Collections.Generic;
 
-namespace HospitalIMSBL
+namespace HospitalIMSServices
 {
     public class Services
     {

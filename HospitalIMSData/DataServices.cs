@@ -1,10 +1,9 @@
 ﻿// Hospital Information Management System Data Layer
 
-using System;
 using System.Collections.Generic;
 using HospitalIMSModels;
 
-namespace HospitalIMSDL
+namespace HospitalIMSData
 {
     public class DataServices
     {
@@ -15,15 +14,38 @@ namespace HospitalIMSDL
         List<Nurse> nurseList = new List<Nurse> ();
         List<Staff> staffList = new List<Staff>();
 
+        SqlDBData sqlData = null;
+
+        // Set true if using database.
+        bool useDatabase = true;
+
         public DataServices()
         {
-            CreateDummyData dummy = new CreateDummyData(
-                doctorList, 
-                patientList, 
-                prescriptionList, 
-                medicationList,
-                nurseList,
-                staffList);
+            if (useDatabase)
+            {
+                sqlData = new SqlDBData();
+                GetSqlData();
+            } else
+            {
+                CreateDummyData dummy = new CreateDummyData(
+                    doctorList,
+                    patientList,
+                    prescriptionList,
+                    medicationList,
+                    nurseList,
+                    staffList
+                );
+            }
+        }
+
+        public void GetSqlData()
+        {
+            doctorList = sqlData.GetDoctors();
+            patientList = sqlData.GetPatients();
+            prescriptionList = sqlData.GetPrescriptions();
+            medicationList = sqlData.GetMedications();
+            nurseList = sqlData.GetNurses();
+            staffList = sqlData.GetStaffs();
         }
 
         public Doctor? GetDoctor(string username, string password)

@@ -1,18 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "+d3H552q+u/c03rFb8y99qiVOQgUBbGo+8K8r/ZojOEQsqDYom2cmpeIgneNYPSObL+VSUGjviEMbv4tBmPt6Q==",
-  "success": false,
+  "dgSpecHash": "DCpKBPo4gHb7Wfympr1OmT5ZSIUtqWAHHu9EjIRAb9TynXGiKlbC1Jek+DUKCWteURc7+K3MCL70IilDsoJqyA==",
+  "success": true,
   "projectFilePath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\Glass\\Desktop\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "expectedPackageFiles": [
+    "C:\\Users\\Glass\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Glass\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
 }

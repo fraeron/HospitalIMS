@@ -1,4 +1,4 @@
-﻿using HospitalIMSBL;
+﻿using HospitalIMSServices;
 using HospitalIMSModels;
 using System;
 using System.Collections.Generic;
@@ -225,11 +225,6 @@ namespace HospitalIMSUI
         {
             Console.Clear();
             utils.CreateBanner("PRESCRIPTION HISTORY");
-            string inscriptionListString = "";
-            foreach (Medication part in target.inscription)
-            {
-                inscriptionListString += "\t" + part.genericName + " " + part.tradeName + "\t" + part.dosageStrength + "\n";
-            }
             Console.WriteLine($"""
                 [[==================================================================================================================]]
                 [[==================================================================================================================]]
@@ -254,7 +249,7 @@ namespace HospitalIMSUI
                       ===========================================================================================================
                 
                       {target.superscription}
-                      {inscriptionListString}
+                      {target.inscription}
 
                       SPECIAL INSTRUCTIONS:
                       {target.specialInstructions}

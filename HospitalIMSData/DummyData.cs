@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using HospitalIMSModels;
 
-namespace HospitalIMSDL
+namespace HospitalIMSData
 {
     public class CreateDummyData
     {
@@ -234,11 +234,12 @@ namespace HospitalIMSDL
                         doctor = doctorList[2],
                         patient = patientList[0],
                         superscription = "Rx",
-                        inscription = new List<Medication>
+                        inscription = concatMedications(new List<Medication>
                             {
                                 medication1,
                                 medication2
                             }
+                        )
                         ,
                         specialInstructions = "For each, take only once per day."
                     },
@@ -248,12 +249,13 @@ namespace HospitalIMSDL
                         doctor = doctorList[2],
                         patient = patientList[1],
                         superscription = "Rx",
-                        inscription = new List<Medication>
+                        inscription = concatMedications(new List<Medication>
                             {
                                 medication1,
                                 medication2,
                                 medication3
                             }
+                        )
                         ,
                         specialInstructions = "Take one before sleeping."
                     },
@@ -263,10 +265,11 @@ namespace HospitalIMSDL
                         doctor = doctorList[2],
                         patient = patientList[2],
                         superscription = "Rx",
-                        inscription = new List<Medication>
+                        inscription = concatMedications(new List<Medication>
                             {
                                 medication3
                             }
+                        )
                     },
                     new Prescription{
                         id = 3,
@@ -274,12 +277,13 @@ namespace HospitalIMSDL
                         doctor = doctorList[2],
                         patient = patientList[1],
                         superscription = "Rx",
-                        inscription = new List<Medication>
+                        inscription = concatMedications(new List<Medication>
                             {
                                 medication1,
                                 medication2,
                                 medication3
                             }
+                        )
                         ,
                         specialInstructions = "Take one before sleeping."
                     },
@@ -289,10 +293,11 @@ namespace HospitalIMSDL
                         doctor = doctorList[0],
                         patient = patientList[1],
                         superscription = "Rx",
-                        inscription = new List<Medication>
+                        inscription = concatMedications(new List<Medication>
                             {
                                 medication3
                             }
+                        )
                         ,
                         specialInstructions = "Take one before sleeping."
                     },
@@ -302,14 +307,23 @@ namespace HospitalIMSDL
                         doctor = doctorList[1],
                         patient = patientList[2],
                         superscription = "Rx",
-                        inscription = new List<Medication>
+                        inscription = concatMedications(new List<Medication>
                             {
                                 medication2
                             }
+                        )
                     }
                 }
 
             ) ;
+        }
+        public string concatMedications(List<Medication> medications)
+        {
+            string concatanated = "";
+            foreach(Medication medicine in medications) {
+                concatanated += medicine.tradeName + " ";
+            }
+            return concatanated;
         }
     }
 }

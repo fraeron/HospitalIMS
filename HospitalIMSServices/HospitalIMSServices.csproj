@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HospitalIMSDL\HospitalIMSDL.csproj" />
+    <ProjectReference Include="..\HospitalIMSData\HospitalIMSData.csproj" />
   </ItemGroup>
 
 </Project>
