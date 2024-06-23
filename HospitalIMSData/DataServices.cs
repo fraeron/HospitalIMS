@@ -16,12 +16,12 @@ namespace HospitalIMSData
 
         SqlDBData sqlData = null;
 
-        // Set true if using database.
-        bool useDatabase = true;
+        // Set true if using SQL database, otherwise, use dummy data.
+        bool useSqlDatabase = true;
 
         public DataServices()
         {
-            if (useDatabase)
+            if (useSqlDatabase)
             {
                 sqlData = new SqlDBData();
                 GetSqlData();
@@ -81,12 +81,25 @@ namespace HospitalIMSData
 
         public void AddPatient(Patient patient)
         {
-            patientList.Add(patient);
+            if (useSqlDatabase)
+            {
+                sqlData.AddPatient(patient)
+            } else
+            {
+                patientList.Add(patient);
+            }
         }
 
         public void RemovePatient(Patient patient)
         {
-            patientList.Remove(patient);
+            if (useSqlDatabase)
+            {
+                sqlData.DeletePatient(patient.name);
+            } else
+            {
+                patientList.Remove(patient);
+            }
+            
         }
 
         public List<Prescription> GetPrescriptions()
@@ -101,12 +114,23 @@ namespace HospitalIMSData
 
         public void AddMedication (Medication medication)
         {
-            medicationList.Add(medication);
+            if (useSqlDatabase)
+            {
+                sqlData.AddMedication(medication.tradeName);
+            } else
+            {
+                medicationList.Add(medication);
+            }
         }
 
         public void RemoveMedication (Medication medication)
         {
-            medicationList.Remove(medication);
+            if (useSqlDatabase) { 
+                sqlData.DeleteMedication(medication.tradeName);
+            } else
+            {
+                medicationList.Remove(medication);
+            }
         }
     }
 }
