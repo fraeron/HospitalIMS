@@ -83,7 +83,7 @@ namespace HospitalIMSData
         {
             if (useSqlDatabase)
             {
-                sqlData.AddPatient(patient)
+                sqlData.AddPatient(patient);
             } else
             {
                 patientList.Add(patient);
@@ -116,7 +116,7 @@ namespace HospitalIMSData
         {
             if (useSqlDatabase)
             {
-                sqlData.AddMedication(medication.tradeName);
+                sqlData.AddMedication(medication);
             } else
             {
                 medicationList.Add(medication);
