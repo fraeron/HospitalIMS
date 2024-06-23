@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "SPQ8jirVvjzaxIQ+QhedRjexbTgQCrVspdyksDUP5J5E5WQ3C63yHNt0KlFcffy2v+0jeZ1Ja7oy3zpGWahcDA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Glass\\Source\\Repos\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
+  "dgSpecHash": "+d3H552q+u/c03rFb8y99qiVOQgUBbGo+8K8r/ZojOEQsqDYom2cmpeIgneNYPSObL+VSUGjviEMbv4tBmPt6Q==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\Glass\\Desktop\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HostpitalIMSBL\\HospitalIMSBL.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
