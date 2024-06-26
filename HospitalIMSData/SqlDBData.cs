@@ -7,11 +7,11 @@ namespace HospitalIMSData
 {
     public class SqlDBData
     {
-        string connectionString = """
-            Data Source = localhost\\SQLEXPRESS;
-            Initial Catalog = PedroHospital; 
-            Integrated Security = True;
-            """;
+        string connectionString =
+                "Data Source=localhost\\SQLEXPRESS;" +
+                "Initial Catalog=PedroHospital;" +
+                "Integrated Security=True;" +
+                "TrustServerCertificate=True";
 
         SqlConnection sqlConnection;
 
