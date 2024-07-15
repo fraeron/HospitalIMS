@@ -38,6 +38,11 @@ namespace HospitalIMSData
             }
         }
 
+        public List<Doctor> GetDoctors()
+        {
+            return doctorList;
+        }
+
         public void GetSqlData()
         {
             doctorList = sqlData.GetDoctors();
@@ -88,6 +93,19 @@ namespace HospitalIMSData
             {
                 patientList.Add(patient);
             }
+        }
+
+        public bool UpdatePatient(Patient patient)
+        {
+            if (useSqlDatabase)
+            {
+                sqlData.AddPatient(patient);
+            }
+            else
+            {
+                patientList.Add(patient);
+            }
+            return true;
         }
 
         public void RemovePatient(Patient patient)

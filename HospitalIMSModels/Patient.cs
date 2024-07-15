@@ -6,13 +6,13 @@ namespace HospitalIMSModels
     {
         public required int id;
         public required string name;
-        public required char sex;
-        public required byte age;
+        public required string sex;
+        public required string age;
         public required DateTime birthday;
-        public required long phoneNumber1;
-        public required long phoneNumber2;
+        public required string phoneNumber1;
+        public string? phoneNumber2 = null;
         public required string address;
-        public required double weightKg;
-        public required double heightFt;
+        public required string weightKg;
+        public required string heightFt;
     }
 }

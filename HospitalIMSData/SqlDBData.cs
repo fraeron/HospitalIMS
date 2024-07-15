@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System;
 using HospitalIMSModels;
+using System.Data.SqlTypes;
 
 namespace HospitalIMSData
 {
@@ -63,14 +64,14 @@ namespace HospitalIMSData
                 {
                     id = Convert.ToInt16(reader["id"]),
                     name = reader["name"].ToString(),
-                    sex = reader["sex"].ToString()[0],
-                    age = Convert.ToByte(reader["age"]),
-                    birthday = new DateTime(Convert.ToInt64(reader["birthday"])),
-                    phoneNumber1 = Convert.ToInt64(reader["phoneNumber1"]),
-                    phoneNumber2 = Convert.ToInt64(reader["phoneNumber2"]),
+                    sex = reader["sex"].ToString(),
+                    age = reader["age"].ToString(),
+                    birthday = DateTime.Parse(reader["birthday"].ToString()),
+                    phoneNumber1 = reader["phoneNumber1"].ToString(),
+                    phoneNumber2 = reader["phoneNumber2"].ToString(),
                     address = reader["address"].ToString(),
-                    weightKg = Convert.ToInt64(reader["phoneNumber1"]),
-                    heightFt = Convert.ToInt64(reader["phoneNumber1"])
+                    weightKg = reader["phoneNumber1"].ToString(),
+                    heightFt = reader["phoneNumber1"].ToString()
                 });
             }
             sqlConnection.Close();
@@ -209,7 +210,7 @@ namespace HospitalIMSData
         {
             int success;
             string insertStatement = """
-                INSERT INTO users 
+                INSERT INTO patients 
                 VALUES (
                     @id,
                     @name,
@@ -235,7 +236,49 @@ namespace HospitalIMSData
             insertCommand.Parameters.AddWithValue("@weightKg", patient.weightKg);
             insertCommand.Parameters.AddWithValue("@heightFt", patient.heightFt);
             sqlConnection.Open();
-            success = insertCommand.ExecuteNonQuery();
+            try
+            {
+                success = insertCommand.ExecuteNonQuery();
+
+            } catch (SqlTypeException ex) {
+                return -1;
+            }
+            sqlConnection.Close();
+            return success;
+        }
+
+        public int UpdatePatient(Patient patient)
+        {
+            int success;
+            string insertStatement = """
+                UPDATE patients 
+                SET (
+                    name=@name,
+                    sex=@sex,
+                    age=@age,
+                    birthday=@birthday,
+                    phoneNumber1=@phoneNumber1,
+                    phoneNumber2=@phoneNumber2,
+                    address=@address,
+                    weightKg=@weightKg,
+                    heightFt=@heightFt
+                )
+                WHERE
+                id = @id
+                """;
+            SqlCommand updateCommand = new SqlCommand(insertStatement, sqlConnection);
+            updateCommand.Parameters.AddWithValue("@id", patient.id);
+            updateCommand.Parameters.AddWithValue("@name", patient.name);
+            updateCommand.Parameters.AddWithValue("@sex", patient.sex);
+            updateCommand.Parameters.AddWithValue("@age", patient.age);
+            updateCommand.Parameters.AddWithValue("@birthday", patient.birthday);
+            updateCommand.Parameters.AddWithValue("@phoneNumber1", patient.phoneNumber1);
+            updateCommand.Parameters.AddWithValue("@phoneNumber2", patient.phoneNumber2);
+            updateCommand.Parameters.AddWithValue("@address", patient.address);
+            updateCommand.Parameters.AddWithValue("@weightKg", patient.weightKg);
+            updateCommand.Parameters.AddWithValue("@heightFt", patient.heightFt);
+            sqlConnection.Open(); 
+            success = updateCommand.ExecuteNonQuery();
             sqlConnection.Close();
             return success;
         }

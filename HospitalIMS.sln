@@ -11,6 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSServices", "Hosp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalIMSData", "HospitalIMSData\HospitalIMSData.csproj", "{6B6A14DB-3618-4204-A33E-FF6E7FF01BE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalIMSAPI", "HospitalIMSAPI\HospitalIMSAPI.csproj", "{66E7CE2B-6DBE-4A6A-8FC5-02258A1A4660}"
+	ProjectSection(ProjectDependencies) = postProject
+		{727831FD-17F4-4492-8200-AE0C3925BABB} = {727831FD-17F4-4492-8200-AE0C3925BABB}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +38,10 @@ Global
 		{6B6A14DB-3618-4204-A33E-FF6E7FF01BE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B6A14DB-3618-4204-A33E-FF6E7FF01BE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B6A14DB-3618-4204-A33E-FF6E7FF01BE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E7CE2B-6DBE-4A6A-8FC5-02258A1A4660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E7CE2B-6DBE-4A6A-8FC5-02258A1A4660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E7CE2B-6DBE-4A6A-8FC5-02258A1A4660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E7CE2B-6DBE-4A6A-8FC5-02258A1A4660}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

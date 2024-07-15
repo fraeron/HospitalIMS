@@ -50,3 +50,14 @@ C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\obj\Debug\net8.0\HospitalIMSUI.
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\obj\Debug\net8.0\Hospital.7E564679.Up2Date
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\obj\Debug\net8.0\HospitalIMSUI.genruntimeconfig.cache
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\obj\Debug\net8.0\ref\HospitalIMSUI.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSAPI.deps.json
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSAPI.runtimeconfig.json
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\appsettings.json
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSAPI.exe
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSAPI.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSAPI.pdb

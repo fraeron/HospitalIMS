@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HospitalIMSAPI\HospitalIMSAPI.csproj" />
     <ProjectReference Include="..\HospitalIMSServices\HospitalIMSServices.csproj" />
   </ItemGroup>
 

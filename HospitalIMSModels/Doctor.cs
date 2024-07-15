@@ -17,5 +17,6 @@ namespace HospitalIMSModels
         public required string type;
         public required int licenseNo;
         public required string signature;
+        public int status = 1;
     }
 }

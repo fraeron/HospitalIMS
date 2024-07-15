@@ -68,13 +68,13 @@ namespace HospitalIMSData
                 id = 0,
                 name = "Robert Randall",
                 address = "Sample Address",
-                age = 25,
+                age = "25",
                 birthday = new DateTime(1999, 1, 1),
-                phoneNumber1 = 09123456789,
-                phoneNumber2 = 09123456789,
-                sex = 'M',
-                weightKg = 72.5,
-                heightFt = 5.9
+                phoneNumber1 = "09123456789",
+                phoneNumber2 = "09123456789",
+                sex = "M",
+                weightKg = "72.5",
+                heightFt = "5.9"
 
             };
             Patient patient2 = new Patient
@@ -83,12 +83,12 @@ namespace HospitalIMSData
                 name = "Theresa Berry",
                 address = "Sample Address",
                 birthday = new DateTime(1999, 1, 2),
-                phoneNumber1 = 09123456789,
-                phoneNumber2 = 09123456789,
-                age = 25,
-                sex = 'F',
-                weightKg = 65.25,
-                heightFt = 5.2
+                phoneNumber1 = "09123456789",
+                phoneNumber2 = "09123456789",
+                age = "25",
+                sex = "F",
+                weightKg = "65.25",
+                heightFt = "5.2"
             };
             Patient patient3 = new Patient
             {
@@ -96,12 +96,12 @@ namespace HospitalIMSData
                 name = "Julia Calvo",
                 address = "Sample Address",
                 birthday = new DateTime(1999, 1, 3),
-                phoneNumber1 = 09123456789,
-                phoneNumber2 = 09123456789,
-                age = 25,
-                sex = 'F',
-                heightFt = 4.11,
-                weightKg = 125
+                phoneNumber1 = "09123456789",
+                phoneNumber2 = "09123456789",
+                age = "25",
+                sex = "F",
+                heightFt = "4.11",
+                weightKg = "125"
             };
 
             Nurse nurse1 = new Nurse

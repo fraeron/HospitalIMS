@@ -84,42 +84,6 @@ namespace HospitalIMSServices
             return userType;
         }
 
-        public Patient? SearchPatient(string givenId)
-        {
-            int id;
-            Patient? foundPatient = null;
-            List<Patient> patients = dataServices.GetPatients();
-            if (Int32.TryParse(givenId, out id))
-            {
-                foreach (Patient patient in patients)
-                {
-                    if (patient.id == id)
-                    {
-                        foundPatient = patient;
-                    }
-                }
-            }
-            return foundPatient;
-        }
-
-        public bool RemovePatient(string patientId)
-        {
-            int id;
-            List<Patient> patients = dataServices.GetPatients();
-            if (Int32.TryParse(patientId, out id))
-            {
-                foreach (Patient patient in patients)
-                {
-                    if (patient.id == id)
-                    {
-                        dataServices.RemovePatient(patient);
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-
         public bool RemoveMedication(string medicationId)
         {
             int id;
@@ -154,69 +118,6 @@ namespace HospitalIMSServices
         public List<Medication> GetMedications()
         {
             return dataServices.GetMedications();
-        }
-
-        public bool AddPatient(
-            string name,
-            string sex,
-            string age,
-            string birthday,
-            string weightKg,
-            string heightFt,
-            string phoneNumber1,
-            string phoneNumber2,
-            string address)
-        {
-            byte bAge;
-            char cSex;
-            double dWeightKg;
-            double dHeightFt;
-            long lPhoneNumber1;
-            long lPhoneNumber2;
-            try
-            {
-                DateTime dtBirthday = DateTime.Parse(birthday);
-                if (sex.Length == 1 && (sex[0] == 'M' || sex[0] == 'F'))
-                {
-                    cSex = sex[0];
-                    if (byte.TryParse(age, out bAge))
-                    {
-                        if (double.TryParse(weightKg, out dWeightKg))
-                        {
-                            if (double.TryParse(heightFt, out dHeightFt))
-                            {
-                                if (long.TryParse(phoneNumber1, out lPhoneNumber1))
-                                {
-                                    if (long.TryParse(phoneNumber2, out lPhoneNumber2))
-                                    {
-                                        List<Patient> patients = dataServices.GetPatients();
-                                        dataServices.AddPatient(new Patient
-                                        {
-                                            id = patients.Count + 1,
-                                            name = name,
-                                            sex = cSex,
-                                            age = bAge,
-                                            birthday = dtBirthday,
-                                            weightKg = dWeightKg,
-                                            heightFt = dHeightFt,
-                                            phoneNumber1 = lPhoneNumber1,
-                                            phoneNumber2 = lPhoneNumber2,
-                                            address = address
-                                        });
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (System.FormatException)
-            {
-                return false;
-            }
-            return false;
-            
         }
 
         public bool AddMedication(

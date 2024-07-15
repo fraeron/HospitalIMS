@@ -7,7 +7,8 @@ namespace HospitalIMSUI
 {
     public class Apps
     {
-        public static Services services = new Services();
+        public static PatientServices patientServices = new PatientServices();
+        public Services services = new Services();
         public static Utils utils = new Utils();
 
         public string GetName()
@@ -47,17 +48,20 @@ namespace HospitalIMSUI
                 string phoneNumber2 = Console.ReadLine() ?? "";
                 Console.Write("[ADDPATIENT] Enter patient's address: ");
                 string address = Console.ReadLine() ?? "";
-                if (services.AddPatient(
-                    name,
-                    sex,
-                    age,
-                    birthday,
-                    weightKg,
-                    heightFt,
-                    phoneNumber1,
-                    phoneNumber2,
-                    address
-                    ))
+                if (patientServices.AddPatient(
+                    new Patient()
+                    {
+                        id = 0, // Any number here. Will be auto-filled.
+                        name = name,
+                        sex = sex,
+                        age = age,
+                        birthday = DateTime.Parse(birthday),
+                        weightKg = weightKg,
+                        heightFt = heightFt,
+                        phoneNumber1 = phoneNumber1,
+                        phoneNumber2 = phoneNumber2,
+                        address = address
+                    }))
                 {
                     Console.WriteLine("[ADDPATIENT] Patient added successfully.");
                 }
@@ -76,7 +80,7 @@ namespace HospitalIMSUI
             utils.CreateBanner("SEARCH FOR A PATIENT");
             Console.Write("[PATIENTSEARCH] Please enter Patient ID: ");
             string id = Console.ReadLine() ?? "";
-            Patient? patient = services.SearchPatient(id);
+            Patient? patient = patientServices.SearchPatient(id);
             if (patient == null)
             {
                 Console.WriteLine("[PATIENTSEARCH] Sorry. This patient does not exist.");
@@ -165,7 +169,7 @@ namespace HospitalIMSUI
             utils.CreateBanner("DELETE A PATIENT");
             Console.Write("[DELETEPATIENT] Please enter Patient ID: ");
             string id = Console.ReadLine() ?? "";
-            if (services.RemovePatient(id))
+            if (patientServices.RemovePatient(id))
             {
                 Console.WriteLine("[DELETEPATIENT] Patient has been removed.");
             }
