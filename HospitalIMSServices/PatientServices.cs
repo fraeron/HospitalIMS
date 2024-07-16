@@ -10,7 +10,7 @@ namespace HospitalIMSServices
         DataServices dataServices;
 
         public PatientServices() {
-            dataServices = new DataServices();
+            dataServices = Services.dataServices;
         }
 
         public List<Patient> GetPatients()

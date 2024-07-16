@@ -7,12 +7,12 @@ namespace HospitalIMSServices
 {
     public class DoctorServices 
     {
-        static DataServices dataServices = new DataServices();
+        static DataServices dataServices;
         private List<Doctor> doctors = new List<Doctor>();
 
         public List<Doctor> GetAllDoctors()
         {
-            DataServices dataService = new DataServices();
+            DataServices dataService = Services.dataServices;
             return dataService.GetDoctors();
         }
 

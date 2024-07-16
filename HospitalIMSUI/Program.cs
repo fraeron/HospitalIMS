@@ -36,6 +36,7 @@ namespace HostpitalIMSUI
         private static void ShowDoctorMenuOptions()
         {
             utils.CreateMenu(new List<String> {
+                "View all Patient Records",
                 "Search for a Patient's Record",
                 "Add a New Patient Record",
                 "Delete an Old Patient Record",
@@ -49,17 +50,21 @@ namespace HostpitalIMSUI
 
         private static void ShowNextUpdate()
         {
-            Console.WriteLine("\n[ANNOUNCEMENT] To be added in the next update:");
-            utils.CreateMenu(new List<String> {
-                "Add a Prescription",
-                "Remove a Prescription",
-                "View Medication"
-            }, false);
+            //Console.WriteLine("\n[ANNOUNCEMENT] To be added in the next update:");
+            //utils.CreateMenu(new List<String> {
+            //    "Add a Prescription",
+            //    "Remove a Prescription",
+            //    "View Medication"
+            //}, false);
+            Console.WriteLine("\n[WARNING] PLEASE READ BEFORE CONTINUING.");
+            Console.WriteLine("WARNING! Most of these features are for visuals only.");
+            Console.WriteLine("NOTICE! Add, Update, Delete of Patients are functional, however.\n");
         }
 
         private static void ShowNurseMenuOptions()
         {
             utils.CreateMenu(new List<String> {
+                "View all Patient Records",
                 "Search for a Patient's Record",
                 "Add a New Patient Record",
                 "Delete an Old Patient Record",
@@ -85,24 +90,27 @@ namespace HostpitalIMSUI
                 switch (userInput)
                 {
                     case "1":
-                        apps.SearchForPatient();
+                        apps.ViewAllPatients();
                         break;
                     case "2":
-                        apps.AddNewPatient();
+                        apps.SearchForPatient();
                         break;
                     case "3":
-                        apps.DeleteOldPatient();
+                        apps.AddNewPatient();
                         break;
                     case "4":
-                        apps.ViewPersonalInformation();
+                        apps.DeleteOldPatient();
                         break;
                     case "5":
-                        apps.ViewPrescriptHistory();
+                        apps.ViewPersonalInformation();
                         break;
                     case "6":
                         apps.ViewMedicineList();
                         break;
                     case "7":
+                        apps.ViewPrescriptHistory();
+                        break;
+                    case "8":
                         isLogin = false;
                         break;
                     default:
@@ -128,21 +136,24 @@ namespace HostpitalIMSUI
                 switch (userInput)
                 {
                     case "1":
-                        apps.SearchForPatient();
+                        apps.ViewAllPatients();
                         break;
                     case "2":
-                        apps.AddNewPatient();
+                        apps.SearchForPatient();
                         break;
                     case "3":
-                        apps.DeleteOldPatient();
+                        apps.AddNewPatient();
                         break;
                     case "4":
-                        apps.ViewPersonalInformation();
+                        apps.DeleteOldPatient();
                         break;
                     case "5":
-                        apps.ViewMedicineList();
+                        apps.ViewPersonalInformation();
                         break;
                     case "6":
+                        apps.ViewMedicineList();
+                        break;
+                    case "7":
                         isLogin = false;
                         break;
                     default:
@@ -184,6 +195,7 @@ namespace HostpitalIMSUI
             utils.CreateBanner(
                 "Welcome! Please login your credentials to continue."
                 );
+            Console.WriteLine("\nFOR DEMO CONVENIENCE, PLEASE USE DOCTOR ACC. PEDRO REYES. \nUSERNAME: pedroreyes\nPASSWORD: 12345\n");
             utils.CreateMenu(new List<String> {
                 "Login",
                 "Exit"

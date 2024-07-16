@@ -6,8 +6,8 @@ namespace HospitalIMSModels
     public class Prescription
     {
         public required int id;
-        public required Patient patient;
-        public required Doctor doctor;
+        public Patient patient;
+        public Doctor doctor;
         public required DateTime date;
         public required string superscription;
         public required string inscription;

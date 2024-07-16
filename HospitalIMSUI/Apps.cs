@@ -21,6 +21,18 @@ namespace HospitalIMSUI
             return services.VerifyUser(username, password);
         }
 
+        public void ViewAllPatients()
+        {
+            Console.Clear();
+            utils.CreateBanner("PATIENT RECORDS LIST");
+            int i = 0;
+            foreach (Patient patient in patientServices.GetPatients()) {
+                Console.WriteLine($"[{i}] ID: {patient.id} | Name: {patient.name}");
+                i++;
+            }
+            utils.PressToConfirm();
+        }
+
         public void AddNewPatient()
         {
             Console.Clear();

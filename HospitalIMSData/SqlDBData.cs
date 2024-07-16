@@ -3,29 +3,35 @@ using System.Data.SqlClient;
 using System;
 using HospitalIMSModels;
 using System.Data.SqlTypes;
+using System.Data;
 
 namespace HospitalIMSData
 {
     public class SqlDBData
     {
         string connectionString =
-                "Data Source=localhost\\SQLEXPRESS;" +
-                "Initial Catalog=PedroHospital;" +
-                "Integrated Security=True;" +
-                "TrustServerCertificate=True";
-
+            "Data Source=localhost\\SQLEXPRESS;" +
+            "Initial Catalog=PedroHospital;" +
+            "Integrated Security=True;" +
+            "TrustServerCertificate=True";
+        string remoteConnectionString =
+            "Server=tcp:20.2.210.49,1433;" +
+            "Database=PedroHospital;" +
+            "User Id=sa;" +
+            "Password=Talaganaman@123!";
         SqlConnection sqlConnection;
 
         public SqlDBData()
         {
-            sqlConnection = new SqlConnection(connectionString);
+            sqlConnection = new SqlConnection(remoteConnectionString);
         }
 
         public List<Doctor> GetDoctors()
         {
             string selectStatement = "SELECT * FROM doctors";
+            if (sqlConnection.State != ConnectionState.Open)
+                sqlConnection.Open();
             SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
-            sqlConnection.Open();
             List<Doctor> doctors = new List<Doctor>();
             SqlDataReader reader = selectCommand.ExecuteReader();
             while (reader.Read())
@@ -38,7 +44,7 @@ namespace HospitalIMSData
                     name = reader["name"].ToString(),
                     age = Convert.ToByte(reader["age"]),
                     address = reader["address"].ToString(),
-                    birthday = new DateTime(Convert.ToInt64(reader["birthday"])),
+                    birthday = DateTime.Parse(reader["birthday"].ToString()),
                     phoneNumber1 = Convert.ToInt64(reader["phoneNumber1"]),
                     phoneNumber2 = Convert.ToInt64(reader["phoneNumber2"]),
                     sex = reader["sex"].ToString()[0],
@@ -54,8 +60,9 @@ namespace HospitalIMSData
         public List<Patient> GetPatients()
         {
             string selectStatement = "SELECT * FROM patients";
+            if (sqlConnection.State != ConnectionState.Open)
+                sqlConnection.Open();
             SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
-            sqlConnection.Open();
             List<Patient> patients = new List<Patient>();
             SqlDataReader reader = selectCommand.ExecuteReader();
             while (reader.Read())
@@ -81,8 +88,9 @@ namespace HospitalIMSData
         public List<Nurse> GetNurses()
         {
             string selectStatement = "SELECT * FROM nurses";
+            if (sqlConnection.State != ConnectionState.Open)
+                sqlConnection.Open();
             SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
-            sqlConnection.Open();
             List<Nurse> nurses = new List<Nurse>();
             SqlDataReader reader = selectCommand.ExecuteReader();
             while (reader.Read())
@@ -95,7 +103,7 @@ namespace HospitalIMSData
                     name = reader["name"].ToString(),
                     age = Convert.ToByte(reader["age"]),
                     address = reader["address"].ToString(),
-                    birthday = new DateTime(Convert.ToInt64(reader["birthday"])),
+                    birthday = DateTime.Parse(reader["birthday"].ToString()),
                     phoneNumber1 = Convert.ToInt64(reader["phoneNumber1"]),
                     phoneNumber2 = Convert.ToInt64(reader["phoneNumber2"]),
                     sex = reader["sex"].ToString()[0],
@@ -109,8 +117,9 @@ namespace HospitalIMSData
         public List<Staff> GetStaffs()
         {
             string selectStatement = "SELECT * FROM staffs";
+            if (sqlConnection.State != ConnectionState.Open)
+                sqlConnection.Open();
             SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
-            sqlConnection.Open();
             List<Staff> staffs = new List<Staff>();
             SqlDataReader reader = selectCommand.ExecuteReader();
             while (reader.Read())
@@ -121,7 +130,7 @@ namespace HospitalIMSData
                     name = reader["name"].ToString(),
                     age = Convert.ToByte(reader["age"]),
                     address = reader["address"].ToString(),
-                    birthday = new DateTime(Convert.ToInt64(reader["birthday"])),
+                    birthday = DateTime.Parse(reader["birthday"].ToString()),
                     phoneNumber1 = Convert.ToInt64(reader["phoneNumber1"]),
                     phoneNumber2 = Convert.ToInt64(reader["phoneNumber2"]),
                     sex = reader["sex"].ToString()[0],
@@ -135,8 +144,9 @@ namespace HospitalIMSData
         public List<Prescription> GetPrescriptions()
         {
             string selectStatement = "SELECT * FROM prescriptions";
+            if (sqlConnection.State != ConnectionState.Open)
+                sqlConnection.Open();
             SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
-            sqlConnection.Open();
             List<Prescription> prescriptions = new List<Prescription>();
             SqlDataReader reader = selectCommand.ExecuteReader();
             while (reader.Read())
@@ -144,11 +154,11 @@ namespace HospitalIMSData
                 prescriptions.Add(new Prescription()
                 {
                     id = Convert.ToInt16(reader["id"]),
-                    doctor = GetDoctor(reader["doctor"].ToString()),
-                    patient = GetPatient(reader["patient"].ToString()),
+                    //doctor = GetDoctor(reader["doctor"].ToString()),
+                    //patient = GetPatient(reader["patient"].ToString()),
                     superscription = reader["superscription"].ToString(),
                     inscription = reader["inscription"].ToString(),
-                    date = new DateTime(Convert.ToInt64(reader["date"])),
+                    date = DateTime.Parse(reader["date"].ToString())
                 });
             }
             sqlConnection.Close();
@@ -158,8 +168,9 @@ namespace HospitalIMSData
         public List<Medication> GetMedications()
         {
             string selectStatement = "SELECT * FROM medications";
+            if (sqlConnection.State != ConnectionState.Open)
+                sqlConnection.Open();
             SqlCommand selectCommand = new SqlCommand(selectStatement, sqlConnection);
-            sqlConnection.Open();
             List<Medication> medications = new List<Medication>();
             SqlDataReader reader = selectCommand.ExecuteReader();
             while (reader.Read())
@@ -172,20 +183,20 @@ namespace HospitalIMSData
                     manufacturer = reader["manufacturer"].ToString(),
                     dosageStrength = reader["dosageStrength"].ToString(),
                     quantity = Convert.ToInt16(reader["quantity"]),
-                    startTimeDrugTaken = new DateTime(Convert.ToInt64(reader["startTimeDrugTaken"])),
-                    endTimeDrugTaken = new DateTime(Convert.ToInt64(reader["endTimeDrugTaken"])),
+                    startTimeDrugTaken = DateTime.Parse(reader["startTimeDrugTaken"].ToString()),
+                    endTimeDrugTaken = DateTime.Parse(reader["endTimeDrugTaken"].ToString()),
                 });
             }
             sqlConnection.Close();
             return medications;
         }
 
-        public Doctor? GetDoctor(string username)
+        public Doctor? GetDoctor(string id)
         {
             Doctor? foundDoctor = null;
             foreach (Doctor doctor in GetDoctors())
             {
-                if (doctor.username == username)
+                if (doctor.id == Convert.ToInt32(id))
                 {
                     foundDoctor = doctor;
                 }
@@ -193,12 +204,12 @@ namespace HospitalIMSData
             return foundDoctor;
         }
 
-        public Patient? GetPatient(string name)
+        public Patient? GetPatient(string id)
         {
             Patient? foundPatient = null;
             foreach (Patient patient in GetPatients())
             {
-                if (patient.name == name)
+                if (patient.id == Convert.ToInt32(id))
                 {
                     foundPatient = patient;
                 }
