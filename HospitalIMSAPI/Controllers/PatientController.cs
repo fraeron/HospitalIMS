@@ -1,9 +1,6 @@
 ﻿using HospitalIMSServices;
 using HospitalIMSModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net;
-using System.Xml.Linq;
 
 namespace HospitalIMSAPI.Controllers
 {
@@ -21,28 +18,7 @@ namespace HospitalIMSAPI.Controllers
         [HttpGet]
         public List<Patient> GetPatients()
         {
-            var patients = _patientGetServices.GetPatients();
-
-            List<Patient> patient = new List<Patient>();
-
-            foreach (var item in patients)
-            {
-                patient.Add(new Patient
-                {
-                    id = item.id,
-                    name = item.name,
-                    sex = item.sex,
-                    address = item.address,
-                    phoneNumber1 = item.phoneNumber1,
-                    phoneNumber2 = item.phoneNumber2,
-                    birthday = item.birthday,
-                    weightKg = item.weightKg,
-                    heightFt = item.heightFt,
-                    age = item.age
-                });
-            }
-
-            return patients;
+            return _patientGetServices.GetPatients();
         }
 
         [HttpPost]

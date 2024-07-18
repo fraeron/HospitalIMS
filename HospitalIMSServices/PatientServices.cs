@@ -8,9 +8,12 @@ namespace HospitalIMSServices
     public class PatientServices
     {
         DataServices dataServices;
+        public List<Patient> patients;
 
-        public PatientServices() {
-            dataServices = Services.dataServices;
+        public PatientServices()
+        {
+            dataServices = DataServices.GetDataService();
+            patients = dataServices.GetPatients();
         }
 
         public List<Patient> GetPatients()

@@ -4,15 +4,15 @@ namespace HospitalIMSModels
 {
     public class Patient
     {
-        public required int id;
-        public required string name;
-        public required string sex;
-        public required string age;
-        public required DateTime birthday;
-        public required string phoneNumber1;
-        public string? phoneNumber2 = null;
-        public required string address;
-        public required string weightKg;
-        public required string heightFt;
+        public required int id { get; set; }
+        public required string name { get; set; }
+        public required string sex { get; set; }
+        public required string age { get; set; }
+        public required DateTime birthday { get; set; }
+        public required string phoneNumber1 { get; set; }
+        public string? phoneNumber2 { get; set; }
+        public required string address { get; set; }
+        public required string weightKg { get; set; }
+        public required string heightFt { get; set; }
     }
 }

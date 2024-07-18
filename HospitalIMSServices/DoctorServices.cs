@@ -7,50 +7,40 @@ namespace HospitalIMSServices
 {
     public class DoctorServices 
     {
-        static DataServices dataServices;
-        private List<Doctor> doctors = new List<Doctor>();
+        DataServices dataServices;
+        public List<Doctor> doctors;
 
-        public List<Doctor> GetAllDoctors()
-        {
-            DataServices dataService = Services.dataServices;
-            return dataService.GetDoctors();
+        public DoctorServices() {
+            dataServices = DataServices.GetDataService();
+            doctors = dataServices.GetDoctors();
         }
 
-        public List<Doctor> GetDoctorsByStatus(int status)
+        public IEnumerable<Doctor> GetAllDoctors()
         {
-            List<Doctor> doctorsByStatus = new List<Doctor>();
-
-            foreach (var user in GetAllDoctors())
-            {
-                if (user.status == status)
-                {
-                    doctorsByStatus.Add(user);
-                }
-            }
-
-            return doctorsByStatus;
+            return dataServices.GetDoctors();
         }
 
-        public Boolean AddDoctor(Doctor doctor)
+        public bool AddDoctor(Doctor doctor)
         {
-            return true;
+            return dataServices.AddDoctor(doctor);
         }
 
-        public Boolean UpdateDoctor(Doctor doctor)
+        public bool UpdateDoctor(Doctor doctor)
         {
-            return true;
+            return dataServices.UpdateDoctor(doctor);
         }
 
-        public Boolean DeleteDoctor(int id)
+        public bool DeleteDoctor(int id)
         {
+            bool result = false;
             foreach (var doctor in GetAllDoctors())
             {
                 if (doctor.id == id)
                 {
-                    doctors.Remove(doctor);
+                    result = dataServices.RemoveDoctor(doctor);
                 }
             }
-            return true;
+            return result;
         }
     }
 }

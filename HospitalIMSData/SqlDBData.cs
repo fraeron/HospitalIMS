@@ -9,7 +9,7 @@ namespace HospitalIMSData
 {
     public class SqlDBData
     {
-        string connectionString =
+        string localConnectionString =
             "Data Source=localhost\\SQLEXPRESS;" +
             "Initial Catalog=PedroHospital;" +
             "Integrated Security=True;" +
@@ -217,6 +217,96 @@ namespace HospitalIMSData
             return foundPatient;
         }
 
+        public int AddDoctor(Doctor doctor)
+        {
+            int success;
+            string insertStatement = """
+                INSERT INTO doctors 
+                VALUES (
+                    @id,
+                    @username,
+                    @password,
+                    @name,
+                    @age,
+                    @birthday,
+                    @address,
+                    @phoneNumber1,
+                    @phoneNumber2,
+                    @sex,
+                    @type,
+                    @licenseNo,
+                    @signature
+                )
+                """;
+            SqlCommand insertCommand = new SqlCommand(insertStatement, sqlConnection);
+            insertCommand.Parameters.AddWithValue("@id", doctor.id);
+            insertCommand.Parameters.AddWithValue("@username", doctor.username);
+            insertCommand.Parameters.AddWithValue("@password", doctor.password);
+            insertCommand.Parameters.AddWithValue("@name", doctor.name);
+            insertCommand.Parameters.AddWithValue("@age", doctor.age);
+            insertCommand.Parameters.AddWithValue("@birthday", doctor.birthday);
+            insertCommand.Parameters.AddWithValue("@address", doctor.address);
+            insertCommand.Parameters.AddWithValue("@phoneNumber1", doctor.phoneNumber1);
+            insertCommand.Parameters.AddWithValue("@phoneNumber2", doctor.phoneNumber2);
+            insertCommand.Parameters.AddWithValue("@sex", doctor.sex);
+            insertCommand.Parameters.AddWithValue("@type", doctor.type);
+            insertCommand.Parameters.AddWithValue("@licenseNo", doctor.licenseNo);
+            insertCommand.Parameters.AddWithValue("@signature", doctor.signature);
+            sqlConnection.Open();
+            try
+            {
+                success = insertCommand.ExecuteNonQuery();
+
+            }
+            catch (SqlTypeException ex)
+            {
+                return -1;
+            }
+            sqlConnection.Close();
+            return success;
+        }
+
+        public int UpdateDoctor(Doctor doctor)
+        {
+            int success;
+            string insertStatement = """
+                UPDATE doctors 
+                SET 
+                    username=@username,
+                    password=@password,
+                    name=@name,
+                    age=@age,
+                    birthday=@birthday,
+                    address=@address,
+                    phoneNumber1=@phoneNumber1,
+                    phoneNumber2=@phoneNumber2,
+                    sex=@sex,
+                    type=@type,
+                    licenseNo=@licenseNo,
+                    signature=@signature
+                WHERE
+                id = @id
+                """;
+            SqlCommand updateCommand = new SqlCommand(insertStatement, sqlConnection);
+            updateCommand.Parameters.AddWithValue("@id", doctor.id);
+            updateCommand.Parameters.AddWithValue("@username", doctor.username);
+            updateCommand.Parameters.AddWithValue("@password", doctor.password);
+            updateCommand.Parameters.AddWithValue("@name", doctor.name);
+            updateCommand.Parameters.AddWithValue("@age", doctor.age);
+            updateCommand.Parameters.AddWithValue("@birthday", doctor.birthday);
+            updateCommand.Parameters.AddWithValue("@address", doctor.address);
+            updateCommand.Parameters.AddWithValue("@phoneNumber1", doctor.phoneNumber1);
+            updateCommand.Parameters.AddWithValue("@phoneNumber2", doctor.phoneNumber2);
+            updateCommand.Parameters.AddWithValue("@sex", doctor.sex);
+            updateCommand.Parameters.AddWithValue("@type", doctor.type);
+            updateCommand.Parameters.AddWithValue("@licenseNo", doctor.licenseNo);
+            updateCommand.Parameters.AddWithValue("@signature", doctor.signature);
+            sqlConnection.Open();
+            success = updateCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+            return success;
+        }
+
         public int AddPatient(Patient patient)
         {
             int success;
@@ -258,12 +348,24 @@ namespace HospitalIMSData
             return success;
         }
 
+        public int DeleteDoctor(string id)
+        {
+            int success;
+            string deleteStatement = $"DELETE FROM doctors WHERE id = @id";
+            SqlCommand deleteCommand = new SqlCommand(deleteStatement, sqlConnection);
+            sqlConnection.Open();
+            deleteCommand.Parameters.AddWithValue("@id", id);
+            success = deleteCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+            return success;
+        }
+
         public int UpdatePatient(Patient patient)
         {
             int success;
             string insertStatement = """
                 UPDATE patients 
-                SET (
+                SET
                     name=@name,
                     sex=@sex,
                     age=@age,
@@ -273,9 +375,8 @@ namespace HospitalIMSData
                     address=@address,
                     weightKg=@weightKg,
                     heightFt=@heightFt
-                )
                 WHERE
-                id = @id
+                id=@id
                 """;
             SqlCommand updateCommand = new SqlCommand(insertStatement, sqlConnection);
             updateCommand.Parameters.AddWithValue("@id", patient.id);

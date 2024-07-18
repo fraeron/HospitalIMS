@@ -9,7 +9,7 @@ namespace HospitalIMSServices
 {
     public class Services
     {
-        public static DataServices dataServices = new DataServices();
+        public DataServices dataServices = DataServices.GetDataService();
         static Doctor? currentDoctor = null;
         static Nurse? currentNurse = null;
         static bool isLogin = false;

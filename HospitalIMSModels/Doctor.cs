@@ -4,19 +4,18 @@ namespace HospitalIMSModels
 {
     public class Doctor
     {
-        public required int id;
-        public required string username;
-        public required string password;
-        public required string name;
-        public required char sex;
-        public required string address;
-        public required long phoneNumber1;
-        public required long phoneNumber2;
-        public required DateTime birthday;
-        public required byte age;
-        public required string type;
-        public required int licenseNo;
-        public required string signature;
-        public int status = 1;
+        public required int id { get; set; }
+        public required string username { get; set; }
+        public required string password { get; set; }
+        public required string name { get; set; }
+        public required char sex { get; set; }
+        public required string address { get; set; }
+        public required long phoneNumber1 { get; set; }
+        public required long phoneNumber2 { get; set; }
+        public required DateTime birthday { get; set; }
+        public required byte age { get; set; }
+        public required string type { get; set; }
+        public required int licenseNo { get; set; }
+        public required string signature { get; set; }
     }
 }

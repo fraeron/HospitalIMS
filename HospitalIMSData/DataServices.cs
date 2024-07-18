@@ -1,5 +1,6 @@
 ﻿// Hospital Information Management System Data Layer
 
+using System;
 using System.Collections.Generic;
 using HospitalIMSModels;
 
@@ -7,14 +8,16 @@ namespace HospitalIMSData
 {
     public class DataServices
     {
-        List<Doctor> doctorList = new List<Doctor> ();
-        List<Patient> patientList = new List<Patient> ();
-        List<Prescription> prescriptionList = new List<Prescription> ();
-        List<Medication> medicationList = new List<Medication> ();
-        List<Nurse> nurseList = new List<Nurse> ();
+        List<Doctor> doctorList = new List<Doctor>();
+        List<Patient> patientList = new List<Patient>();
+        List<Prescription> prescriptionList = new List<Prescription>();
+        List<Medication> medicationList = new List<Medication>();
+        List<Nurse> nurseList = new List<Nurse>();
         List<Staff> staffList = new List<Staff>();
-
         SqlDBData sqlData = null;
+
+        // Use singleton pattern to avoid most I/O errors from multiple instances.
+        private static readonly DataServices dataServiceSingleton = new DataServices();
 
         // Set true if using SQL database, otherwise, use dummy data.
         bool useSqlDatabase = true;
@@ -25,7 +28,8 @@ namespace HospitalIMSData
             {
                 sqlData = new SqlDBData();
                 GetSqlData();
-            } else
+            }
+            else
             {
                 CreateDummyData dummy = new CreateDummyData(
                     doctorList,
@@ -38,8 +42,14 @@ namespace HospitalIMSData
             }
         }
 
+        public static DataServices GetDataService()
+        {
+            return dataServiceSingleton;
+        }
+
         public List<Doctor> GetDoctors()
         {
+            doctorList = sqlData.GetDoctors();
             return doctorList;
         }
 
@@ -55,8 +65,9 @@ namespace HospitalIMSData
 
         public Doctor? GetDoctor(string username, string password)
         {
+            doctorList = sqlData.GetDoctors();
             Doctor? foundDoctor = null;
-            foreach(Doctor doctor in doctorList)
+            foreach (Doctor doctor in doctorList)
             {
                 if (doctor.username == username && doctor.password == password)
                 {
@@ -68,8 +79,9 @@ namespace HospitalIMSData
 
         public Nurse? GetNurse(string username, string password)
         {
+            nurseList = sqlData.GetNurses();
             Nurse? foundNurse = null;
-            foreach(Nurse nurse in nurseList)
+            foreach (Nurse nurse in nurseList)
             {
                 if (nurse.username == username && nurse.password == password)
                 {
@@ -81,17 +93,19 @@ namespace HospitalIMSData
 
         public List<Patient> GetPatients()
         {
+            patientList = sqlData.GetPatients();
             return patientList;
         }
 
-        public void AddPatient(Patient patient)
+        public bool AddPatient(Patient patient)
         {
             if (useSqlDatabase)
             {
-                sqlData.AddPatient(patient);
+                return sqlData.AddPatient(patient) != -1;
             } else
             {
                 patientList.Add(patient);
+                return true;
             }
         }
 
@@ -99,25 +113,64 @@ namespace HospitalIMSData
         {
             if (useSqlDatabase)
             {
-                sqlData.AddPatient(patient);
+                return sqlData.UpdatePatient(patient) != -1;
             }
             else
             {
-                patientList.Add(patient);
+                // Do nothing. Non-SQL functions does not support editing.
+                return true;
             }
-            return true;
         }
 
-        public void RemovePatient(Patient patient)
+        public bool RemovePatient(Patient patient)
         {
             if (useSqlDatabase)
             {
-                sqlData.DeletePatient(patient.name);
+                return sqlData.DeletePatient(patient.name) != -1;
             } else
             {
                 patientList.Remove(patient);
+                return true;
             }
-            
+        }
+
+        public bool RemoveDoctor(Doctor doctor)
+        {
+            if (useSqlDatabase)
+            {
+                return sqlData.DeleteDoctor(Convert.ToString(doctor.id)) != -1;
+            }
+            else
+            {
+                doctorList.Remove(doctor);
+                return true;
+            }
+        }
+
+        public bool AddDoctor(Doctor doctor)
+        {
+            if (useSqlDatabase)
+            {
+                return sqlData.AddDoctor(doctor) != -1;
+            }
+            else
+            {
+                doctorList.Add(doctor);
+                return true;
+            }
+        }
+
+        public bool UpdateDoctor(Doctor doctor)
+        {
+            if (useSqlDatabase)
+            {
+                return sqlData.UpdateDoctor(doctor) != -1;
+            }
+            else
+            {
+                // Do nothing. Non-SQL functions does not support editing.
+                return true;
+            }
         }
 
         public List<Prescription> GetPrescriptions()
