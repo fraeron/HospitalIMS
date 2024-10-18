@@ -23,7 +23,7 @@ namespace HospitalIMSData
 
         public SqlDBData()
         {
-            sqlConnection = new SqlConnection(remoteConnectionString);
+            sqlConnection = new SqlConnection(localConnectionString);
         }
 
         public List<Doctor> GetDoctors()

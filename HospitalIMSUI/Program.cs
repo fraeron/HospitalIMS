@@ -43,6 +43,7 @@ namespace HostpitalIMSUI
                 "View your Personal Information",
                 "Review Your Prescription History",
                 "View List of Medications",
+                "Send Appointment to an Existing Patient",
                 "Logout"
             });
             ShowNextUpdate();
@@ -111,6 +112,9 @@ namespace HostpitalIMSUI
                         apps.ViewPrescriptHistory();
                         break;
                     case "8":
+                        apps.AddNewAppointment();
+                        break;
+                    case "9":
                         isLogin = false;
                         break;
                     default:
@@ -205,6 +209,7 @@ namespace HostpitalIMSUI
         private static void Main(string[] args) {          
             while (isActive)
             {
+                new ThirdPartyAPI().ShowCovid19Tracker();
                 ShowMainMenuOptions();
                 ShowMainMenu();
             }

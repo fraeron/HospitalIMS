@@ -61,3 +61,10 @@ C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\Swashbuckle.As
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSAPI.dll
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSAPI.pdb
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSUI.dll.config
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\MailKit.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\MimeKit.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSUI\bin\Debug\net8.0\HospitalIMSServices.dll.config

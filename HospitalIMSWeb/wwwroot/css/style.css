@@ -1,0 +1,24 @@
+﻿.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fixed-width {
+    width: 450px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    width: 80px;
+    height: 30px
+}

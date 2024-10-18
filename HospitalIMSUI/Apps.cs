@@ -9,6 +9,7 @@ namespace HospitalIMSUI
     {
         public static PatientServices patientServices = new PatientServices();
         public Services services = new Services();
+        public MailkitServices mimeService = new MailkitServices();
         public static Utils utils = new Utils();
 
         public string GetName()
@@ -31,6 +32,55 @@ namespace HospitalIMSUI
                 i++;
             }
             utils.PressToConfirm();
+        }
+
+        public void AddNewAppointment()
+        {
+            Console.Clear();
+            utils.CreateBanner("ADD A NEW APPOINTMENT FOR AN EXISTING PATIENT");
+            Console.WriteLine("[NEWAPPOINTMENT] WARNING. This will require the user to input multiple answers.");
+            Console.Write("[NEWAPPOINTMENT] Proceed? Type 'y' to continue. ");
+            string userProceed = Console.ReadLine() ?? "";
+            if (userProceed == "y")
+            {
+                Console.Write("Please enter patient ID to add an appointment: ");
+                string patientId = Console.ReadLine();
+                Patient gotPatient = patientServices.SearchPatient(patientId);
+                if (gotPatient != null)
+                {
+                    Console.Write("Please enter date of appointment: ");
+                    string date = Console.ReadLine();
+                    Console.Write("Please enter time of appointment: ");
+                    string time = Console.ReadLine();
+                    Console.Write("Please enter service to admister to patient: ");
+                    string service = Console.ReadLine();
+                    string subject = String.Format("Pedro Grace Hospital - Appointment Confirmation for {0} on {1}", gotPatient.name, date);
+                    Console.WriteLine("[NEWAPPOINTMENT] Processing appointment details and sending over email. Please wait.");
+                    bool status = mimeService.SendAppointment(
+                        services.makeAppointmentMessage(
+                                gotPatient,
+                                services.GetDoctor(),
+                                date,
+                                time,
+                                service
+                            ),
+                        subject);
+                    if (status)
+                    {
+                        Console.WriteLine("[NEWAPPOINTMENT] Successfully added appointment and confirmation is sent over e-mail.");
+                    } else
+                    {
+                        Console.WriteLine("[NEWAPPOINTMENT] Failed to add appointment to patient. Error: " + mimeService.GetCurrentError());
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("[NEWAPPOINTMENT] Failed to add a new appointment to any patient. Please try again.");
+                }
+                utils.PressToConfirm();
+            }
+            
+            
         }
 
         public void AddNewPatient()
