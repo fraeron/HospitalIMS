@@ -1,5 +1,6 @@
 using HospitalIMSWeb.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace HospitalIMSWeb.Controllers
@@ -13,9 +14,20 @@ namespace HospitalIMSWeb.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            Cat cat = new Cat();
+            // Cataas API.
+            string APIURL = "https://cataas.com/cat?json=true";
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(APIURL);
+
+                var result = await response.Content.ReadAsStringAsync();
+                cat = JsonConvert.DeserializeObject<Cat>(result);
+            }
+
+            return View(cat);
         }
 
         public IActionResult Privacy()

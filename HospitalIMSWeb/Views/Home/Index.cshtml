@@ -1,10 +1,12 @@
-﻿@{
+﻿@model HospitalIMSWeb.Models.Cat
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome to Pedro Grace's Hospital.</h1>
     <i>The developer of this website is still working on this site. At the meantime, take a look at this cat (or cats):</i><br/>
-    <img style="margin-top:10px; border-color:rgba(0,0,0,.9); border-style: thin; border-style:solid" width="350" src="https://cataas.com/cat">
+    <img src="https://cataas.com/cat/@Model._id" alt="a description of the image" asp-append-version="true" />
     <p style="font-size:smaller"><i>Credits to the RESTful public API: <a href="https://www.cataas.com">www.cataas.com</a></i>!</p>
 </div>
