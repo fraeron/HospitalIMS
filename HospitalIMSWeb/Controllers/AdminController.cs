@@ -3,22 +3,24 @@ using Microsoft.AspNetCore.Mvc;
 using HospitalIMSWeb;
 using Newtonsoft.Json;
 using HospitalIMSModels;
+using HospitalIMSWeb.Models;
 
 namespace HospitalIMSWeb.Controllers
 {
-    public class DashboardController : Controller
+    public class AdminController : Controller
     {
-        private string ApiUrl = "https://localhost:7109/api/doctor";
+        private string DoctorApiUrl = "https://localhost:7109/api/doctor";
+        private string CloudflareApiUrl = "https://speed.cloudflare.com/meta";
 
 
-        // GET: DoctorDashboardController
-        public async Task<ActionResult> Index()
+        // GET: AdminController
+        public async Task<ActionResult> Index(int id)
         {
             List<Doctor> users = new List<Doctor>();
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync(ApiUrl);
+                HttpResponseMessage response = await client.GetAsync(DoctorApiUrl);
 
                 var result = await response.Content.ReadAsStringAsync();
                 users = JsonConvert.DeserializeObject<List<Doctor>>(result);
@@ -27,19 +29,33 @@ namespace HospitalIMSWeb.Controllers
             return View(users);
         }
 
-        // GET: DoctorDashboardController/Details/5
+        public async Task<ActionResult> Trace()
+        {
+            Cloudflare cloudflare = new Cloudflare();
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(CloudflareApiUrl);
+
+                var result = await response.Content.ReadAsStringAsync();
+                cloudflare = JsonConvert.DeserializeObject<Cloudflare>(result);
+            }
+            return View(cloudflare);
+        }
+
+        // GET: AdminController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: DoctorDashboardController/Create
+        // GET: AdminController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: DoctorDashboardController/Create
+        // POST: AdminController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -54,13 +70,13 @@ namespace HospitalIMSWeb.Controllers
             }
         }
 
-        // GET: DoctorDashboardController/Edit/5
+        // GET: AdminController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: DoctorDashboardController/Edit/5
+        // POST: AdminController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -75,13 +91,13 @@ namespace HospitalIMSWeb.Controllers
             }
         }
 
-        // GET: DoctorDashboardController/Delete/5
+        // GET: AdminController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: DoctorDashboardController/Delete/5
+        // POST: AdminController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

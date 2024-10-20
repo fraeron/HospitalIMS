@@ -3,10 +3,21 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+<link rel="stylesheet" href="~/css/home.css" />
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="column-left">
+            <h2>Welcome to</h2>
+            <h1>Pedro's Grace Hospital</h1>
+            <p>
+                Where healing meets compassion, and every patient is treated like family.
+                Get started with our services ranging from pharmaceutical to surgical.
+            </p>
+            <button onclick="location.href = '/Doctor';">Login as Doctor</button>
+        </div>
+        <div class="column-left">
+            <img src="~/img/caduceus.svg" class="filter-blue hero-image" />
+        </div>
+    </div>
+</section>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Pedro Grace's Hospital.</h1>
-    <i>The developer of this website is still working on this site. At the meantime, take a look at this cat (or cats):</i><br/>
-    <img style="margin-top: 25px" src="https://cataas.com/cat/@Model._id" width="350px" alt="a description of the image" asp-append-version="true" />
-    <p style="font-size:smaller"><i>Credits to the RESTful public API: <a href="https://www.cataas.com">www.cataas.com</a></i>!</p>
-</div>

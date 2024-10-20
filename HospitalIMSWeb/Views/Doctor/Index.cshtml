@@ -1,0 +1,115 @@
+﻿@model IEnumerable<HospitalIMSModels.Patient>
+
+@{
+    ViewData["Title"] = "Doctor's Dashboard";
+}
+
+<link type="text/css" rel="stylesheet" href="~/css/style.css" />
+<h1>Welcome, doctor.</h1>
+<p><i>This page is not final and only to showcase Swagger API access with third-party APIs.</i></p>
+<br/>
+
+<h2>Statistics Summary (Third-party APIs)</h2>
+<div class="row">
+    <div class="column">
+        <b>Current Coronavirus Real-Time Data (coronavirus.net API):</b>
+        <p id="coronavirus-tracker-p">Retrieving data...</p>
+    </div>
+</div>
+<br/>
+
+<h2>Patient Database (Swagger API)</h2>
+@Html.ActionLink("Add a New Patient", "Create", new { /* id=item.PrimaryKey */ })
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @* @Html.DisplayNameFor(model => model.id) *@
+                ID
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.name) *@
+                Name
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.sex) *@
+                Sex
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.address) *@
+                Address
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.phoneNumber1) *@
+                Phone Number #1
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.phoneNumber2) *@
+                Phone Number #2
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.birthday) *@
+                Birthday
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.age) *@
+                Age
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.type) *@
+                Height (in Feet)
+            </th>
+            <th>
+                @* @Html.DisplayNameFor(model => model.licenseNo) *@
+                Weight (in Kilograms)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phoneNumber1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.phoneNumber2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.birthday)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.heightFt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.weightKg)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@* Insert scripts here.*@
+<script src="https://smtpjs.com/v3/smtp.js"></script> @* Include in order for MailTrap API to work. *@
+<script src="~/js/script.js"></script>

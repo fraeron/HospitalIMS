@@ -9,28 +9,49 @@ namespace HospitalIMSWeb.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        // Init. variables for Cataas API.
+        
+        private string APIURL = "https://cataas.com/cat?json=true";
+
         public HomeController(ILogger<HomeController> logger)
         {
+            
             _logger = logger;
+        }
+
+        public async Task<Cat> GetCat()
+        {
+            Cat cat = new Cat();
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(APIURL);
+                var result = await response.Content.ReadAsStringAsync();
+                cat = JsonConvert.DeserializeObject<Cat>(result);
+            }
+            return cat;
         }
 
         public async Task<IActionResult> Index()
         {
-            Cat cat = new Cat();
-            // Cataas API.
-            string APIURL = "https://cataas.com/cat?json=true";
-            using (HttpClient client = new HttpClient())
-            {
-                HttpResponseMessage response = await client.GetAsync(APIURL);
-
-                var result = await response.Content.ReadAsStringAsync();
-                cat = JsonConvert.DeserializeObject<Cat>(result);
-            }
-
-            return View(cat);
+            return View(await GetCat());
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Unfinished()
+        {
+            return View(await GetCat());
+        }
+
+        public async Task<IActionResult> About()
+        {
+            return View(await GetCat());
+        }
+
+        public IActionResult Contact()
         {
             return View();
         }

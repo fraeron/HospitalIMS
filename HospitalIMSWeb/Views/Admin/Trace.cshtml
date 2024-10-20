@@ -1,0 +1,35 @@
+﻿@model HospitalIMSWeb.Models.Cloudflare
+
+@{
+    ViewData["Title"] = "Network Details";
+}
+
+<link type="text/css" rel="stylesheet" href="~/css/style.css" />
+<link type="text/css" rel="stylesheet" href="~/css/admin.css" />
+<h1>Current Network Details (Cloudflare Trace API):</h1>
+Hostname: @Model.hostname
+<br>
+Client IP Address: @Model.clientIp
+<br>
+HTTP Protocol Received: @Model.httpProtocol
+<br>
+ASN: @Model.asn
+<br>
+Organization/Internet Service Provider: @Model.asOrganization
+<br>
+Colocation Facility: @Model.colo
+<br>
+Country: @Model.country
+<br>
+City: @Model.city
+<br>
+Region: @Model.region
+<br>
+Postal Code: @Model.postalCode
+<br>
+Latitude: @Model.latitude
+<br>
+Longitude: @Model.longitude
+<br>
+
+<button class="button-trace" onclick="location.href = '/Admin'">Return to Dashboard</button>

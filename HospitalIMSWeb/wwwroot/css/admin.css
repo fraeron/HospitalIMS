@@ -1,0 +1,18 @@
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    color: #98daf8;
+    background: #00529a;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover {
+    background: #fff;
+    color: #00529a;
+}
+
+.button-trace {
+    margin-top: 1rem;
+}
