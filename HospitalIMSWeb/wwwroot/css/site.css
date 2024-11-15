@@ -17,6 +17,8 @@ html {
   min-height: 100%;
 }
 
+
+
 body {
   margin-bottom: 60px;
 }
@@ -44,4 +46,8 @@ footer {
 
 .navbar-logo {
     width: 150px;
+}
+
+.sendemail-inputbox {
+    width: 50rem;
 }

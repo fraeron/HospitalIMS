@@ -1,0 +1,39 @@
+﻿@model HospitalIMSModels.Patient
+
+@{
+    ViewData["Title"] = "Send Email";
+}
+
+<!-- Guide used: https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view -->
+
+<link rel="stylesheet" href="~/css/home.css" />
+
+<h1>Send an Appointment Email to Patient</h1>
+<p>This page is to showcase MailTrap (sends email after submit) and Amazon S3 functionality (save copy of email to server after submit).</p>
+
+
+@using (Html.BeginForm()) {
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                Subject:<br />
+                <input type="text" name="subject" class="sendemail-inputbox" id="subject" value="Pedro Grace Hospital - Appointment Confirmation"/><br />
+                Scheduled Date:<br />
+                <input type="date" name="date" class="sendemail-inputbox" id="date" /><br />
+                Schedule Time:<br />
+                <input type="time" name="time" class="sendemail-inputbox" id="time" /><br />
+                Service to Administer to Patient:<br/>
+                <input type="text" name="service" class="sendemail-inputbox" id="service" /><br />
+
+                <div class="form-group" style="margin-top:14px;">
+                    <input type="submit" value="Send Email" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+}
+<div>
+    <a asp-action="Index">Cancel</a>
+</div>
+

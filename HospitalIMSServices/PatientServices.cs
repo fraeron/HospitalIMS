@@ -9,6 +9,9 @@ namespace HospitalIMSServices
     {
         DataServices dataServices;
         public List<Patient> patients;
+        public MailkitServices mimeService = new MailkitServices();
+        public Services services = new Services();
+        private AWSServices s3services = new AWSServices();
 
         public PatientServices()
         {
@@ -19,6 +22,40 @@ namespace HospitalIMSServices
         public List<Patient> GetPatients()
         {
             return dataServices.GetPatients();
+        }
+
+
+        public bool SendEmail(string patientId, string subject, string date, string time, string service)
+        {
+            try
+            {
+                // Fixed output for now.
+                string result = mimeService.SendAppointmentAndReturnContent(
+                    services.makeAppointmentMessage(
+                            SearchPatient(patientId),
+                            services.GetDoctor(),
+                            date,
+                            time,
+                            service
+                        ),
+                    subject);
+
+                // Save first to a local text file.
+                // Ex. pattern of text file: 2001-01-24_12-59-24PM.txt
+                string pattern = "yyyy-MM-dd_hh-mm-sstt";
+                DateTime localDate = DateTime.Now;
+                string fileName = localDate.ToString(pattern) + ".txt";
+                string txtPath = services.SaveStringToTextFile(result, fileName);
+
+                // Upload to AWS S3.
+                s3services.uploadFile(txtPath);
+
+                return true;
+            } catch (Exception ex)
+            {
+                return false;
+            }
+            
         }
 
         public Patient? SearchPatient(string givenId)

@@ -21,7 +21,7 @@ namespace HospitalIMSAPI.Controllers
             return _patientGetServices.GetPatients();
         }
 
-        [HttpPost]
+        [HttpPost("AddPatient")]
         public JsonResult AddPatient(Patient request)
         {
             var result = _patientGetServices.AddPatient(request);
@@ -32,6 +32,13 @@ namespace HospitalIMSAPI.Controllers
         public JsonResult UpdatePatient(Patient request)
         {
             var result = _patientGetServices.UpdatePatient(request);
+            return new JsonResult(result);
+        }
+
+        [HttpPost("SendEmail")]
+        public JsonResult SendEmail(Patient request, string subject, string date, string time, string service)
+        {
+            var result = _patientGetServices.SendEmail(request.id.ToString(), subject, date, time, service);
             return new JsonResult(result);
         }
 

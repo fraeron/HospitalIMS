@@ -4,6 +4,7 @@ using HospitalIMSData;
 using HospitalIMSModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace HospitalIMSServices
 {
@@ -51,8 +52,31 @@ namespace HospitalIMSServices
                 """;
 
             string style = "<style>p{margin:0}</style>";
+            if (doctor != null)
+            {
+                return style + String.Format(
+                    template, patient.name, date, time, doctor.name, service, doctor.type, doctor.username + "@pedrogracehospital.com");
+            }
+            // Set the following if website.
             return style + String.Format(
-                template, patient.name, date, time, doctor.name, service, doctor.type, doctor.username + "@pedrogracehospital.com");
+                    template, patient.name, date, time, "<Sample Doctor Name>", service, "<Sample Doctor Type>", "<Sample Doctor Username>" + "@pedrogracehospital.com");
+        }
+
+        public string SaveStringToTextFile(string content, string fileName)
+        {
+
+            // Guide: https://learn.microsoft.com/en-us/dotnet/standard/io/how-to-write-text-to-a-file
+
+            // Create a string array with the lines of text
+            string[] lines = {content};
+
+            using (StreamWriter outputFile = new StreamWriter(fileName))
+            {
+                foreach (string line in lines)
+                    outputFile.WriteLine(line);
+            }
+
+            return fileName;
         }
 
         public UserType VerifyUser(string username, string password)

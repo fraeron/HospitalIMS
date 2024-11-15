@@ -46,11 +46,10 @@ button {
     border-radius: 50px;
 }
 
-    button:hover {
-        background: #fff;
-        color: #00529a;
-    }
-
+button:hover {
+    background: #fff;
+    color: #00529a;
+}
 
 .column-right {
     display: flex;

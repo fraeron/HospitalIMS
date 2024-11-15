@@ -108,10 +108,14 @@ namespace HospitalIMSServices
 
             static async Task ProcessRepositoriesAsync(HttpClient client)
             {
-                string Covid19APIURL = "https://coronavirus.m.pipedream.net/";
-                await using Stream stream = await client.GetStreamAsync(Covid19APIURL);
-                var repositories = await JsonSerializer.DeserializeAsync<Root>(stream);
-                Console.Write(repositories.summaryStats.global.confirmed);
+                try
+                {
+                    string Covid19APIURL = "https://coronavirus.m.pipedream.net/";
+                    await using Stream stream = await client.GetStreamAsync(Covid19APIURL);
+                    var repositories = await JsonSerializer.DeserializeAsync<Root>(stream);
+                } catch (System.Net.Http.HttpRequestException) {
+                    // Error.
+                }               
             }
         }
     }

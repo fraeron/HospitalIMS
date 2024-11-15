@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj": {}
+    "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj": {
+    "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj",
         "projectName": "HospitalIMSAPI",
-        "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj",
-        "packagesPath": "C:\\Users\\Glass\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSAPI\\obj\\",
+        "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj",
+        "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Glass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
-                "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj"
+              "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
+                "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj"
               },
-              "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj": {
-                "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj"
+              "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj": {
+                "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj"
               }
             }
           }
@@ -85,24 +85,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj": {
+    "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj",
         "projectName": "HospitalIMSData",
-        "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj",
-        "packagesPath": "C:\\Users\\Glass\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSData\\obj\\",
+        "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj",
+        "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Glass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -118,8 +118,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
-                "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj"
+              "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
+                "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj"
               }
             }
           }
@@ -160,24 +160,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
+    "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
         "projectName": "HospitalIMSModels",
-        "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
-        "packagesPath": "C:\\Users\\Glass\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSModels\\obj\\",
+        "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\HospitalIMSModels.csproj",
+        "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Glass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -225,24 +225,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj": {
+    "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj",
         "projectName": "HospitalIMSServices",
-        "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj",
-        "packagesPath": "C:\\Users\\Glass\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\obj\\",
+        "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj",
+        "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Glass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -258,8 +258,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj": {
-                "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj"
+              "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj": {
+                "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSData\\HospitalIMSData.csproj"
               }
             }
           }
@@ -279,6 +279,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.406.1, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[4.8.0, )"
@@ -304,24 +308,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj": {
+    "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
+        "projectUniqueName": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
         "projectName": "HospitalIMSUI",
-        "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
-        "packagesPath": "C:\\Users\\Glass\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSUI\\obj\\",
+        "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSUI\\HospitalIMSUI.csproj",
+        "packagesPath": "C:\\Users\\Omega\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Glass\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Omega\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -337,11 +341,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj": {
-                "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj"
+              "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj": {
+                "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSAPI\\HospitalIMSAPI.csproj"
               },
-              "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj": {
-                "projectPath": "C:\\Users\\Glass\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj"
+              "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj": {
+                "projectPath": "C:\\Users\\Omega\\Desktop\\HospitalIMS\\HospitalIMSServices\\HospitalIMSServices.csproj"
               }
             }
           }
@@ -376,7 +380,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -22,3 +22,15 @@ C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIM
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\refint\HospitalIMSModels.dll
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.pdb
 C:\Users\Glass\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\ref\HospitalIMSModels.dll
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\bin\Debug\net8.0\HospitalIMSModels.deps.json
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\bin\Debug\net8.0\HospitalIMSModels.dll
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\bin\Debug\net8.0\HospitalIMSModels.pdb
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.AssemblyInfoInputs.cache
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.AssemblyInfo.cs
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.csproj.CoreCompileInputs.cache
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.sourcelink.json
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.dll
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\refint\HospitalIMSModels.dll
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\HospitalIMSModels.pdb
+C:\Users\Omega\Desktop\HospitalIMS\HospitalIMSModels\obj\Debug\net8.0\ref\HospitalIMSModels.dll

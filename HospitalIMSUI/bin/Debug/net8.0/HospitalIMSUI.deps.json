@@ -15,6 +15,25 @@
           "HospitalIMSUI.dll": {}
         }
       },
+      "AWSSDK.Core/3.7.400.52": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.400.52"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.406.1": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.400.52"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.406.1"
+          }
+        }
+      },
       "BouncyCastle.Cryptography/2.4.0": {
         "runtime": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
@@ -176,7 +195,14 @@
         }
       },
       "System.Diagnostics.EventLog/8.0.0": {},
-      "System.Formats.Asn1/8.0.1": {},
+      "System.Formats.Asn1/8.0.1": {
+        "runtime": {
+          "lib/net8.0/System.Formats.Asn1.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.724.31311"
+          }
+        }
+      },
       "System.Security.AccessControl/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -224,6 +250,7 @@
       },
       "HospitalIMSServices/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.7.406.1",
           "HospitalIMSData": "1.0.0",
           "MailKit": "4.8.0",
           "System.Configuration.ConfigurationManager": "8.0.0"
@@ -239,6 +266,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.400.52": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LggIgwEDQt4FjI86zG/B9UapOh4/zv/mzya8V85BGvqvzjMBrE9Qr8YdtMmmFavw94FnekdjgWyZgFHD4ZPGgw==",
+      "path": "awssdk.core/3.7.400.52",
+      "hashPath": "awssdk.core.3.7.400.52.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.406.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HzAn3n8mUJYiLqREU+kLXlV97Vh9ouTw7PUmfUwV9dJUQcP2h5wqtaZpgGW8TgJv43uqjOTjtQe8Ty2kfANdXQ==",
+      "path": "awssdk.s3/3.7.406.1",
+      "hashPath": "awssdk.s3.3.7.406.1.nupkg.sha512"
     },
     "BouncyCastle.Cryptography/2.4.0": {
       "type": "package",

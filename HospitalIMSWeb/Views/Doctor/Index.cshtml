@@ -101,6 +101,8 @@
                     @Html.DisplayFor(modelItem => item.weightKg)
                 </td>
                 <td>
+                    <!-- Send email using MailTrap then upload a copy to S3.-->
+                    @Html.ActionLink("Send Email Appointment", "SendEmail", new { id = item.id }) |
                     @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
